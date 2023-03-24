@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  --tw-color-primary-50: 240 249 255;
+  --tw-color-primary-100: 229 230 231;
+  --tw-color-primary-200: 228 235 242;
+  --tw-color-primary-300: 125 211 252;
+  --tw-color-primary-400: 56 189 248;
+  --tw-color-primary-500: 14 165 233;
+  --tw-color-primary-600: 75 86 97;
+  --tw-color-primary-700: 3 105 161;
+  --tw-color-primary-800: 7 89 133;
+  --tw-color-primary-900: 32 20 16;
+  --color-primary-50: rgb(var(--tw-color-primary-50));
+  --color-primary-100: rgb(var(--tw-color-primary-100));
+  --color-primary-200: rgb(var(--tw-color-primary-200));
+  --color-primary-300: rgb(var(--tw-color-primary-300));
+  --color-primary-400: rgb(var(--tw-color-primary-400));
+  --color-primary-500: rgb(var(--tw-color-primary-500));
+  --color-primary-600: rgb(var(--tw-color-primary-600));
+  --color-primary-700: rgb(var(--tw-color-primary-700));
+  --color-primary-800: rgb(var(--tw-color-primary-800));
+  --color-primary-900: rgb(var(--tw-color-primary-900));
+  /* #endregion  /**======== Primary Color =========== */
+}
+
+@layer base {
+  
+  /* @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+    body {
+      color: white;
+      background: black;
+    }
+  } */
+  
+   /* custom styles  */
+  
+    /* defaults for blog post content */
+    .content li {
+      margin-left: 1rem;
+    }
+    .content p,
+    .content li {
+      @apply mb-4 text-lg;
+    }
+    .content a {
+      @apply border-b-blue-500 font-semibold text-blue-600 hover:border-b-2 dark:text-blue-500;
+    }
+  
+    .content h2,
+    .content h3,
+    .content h4 {
+      margin-bottom: 1rem;
+      margin-top: 0.5rem;
+    }
+  
+    .content img {
+      @apply my-8;
+    }
+  
+    /* end custom styles  */
+  
+  /* fira-sans-extra-condensed-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans Extra Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/fira-sans-extra-condensed-v10-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('/fonts/fira-sans-extra-condensed-v10-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* fira-sans-extra-condensed-700italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans Extra Condensed';
+    font-style: italic;
+    font-weight: 700;
+    src: url('/fonts/fira-sans-extra-condensed-v10-latin-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('/fonts/fira-sans-extra-condensed-v10-latin-700italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* fira-sans-extra-condensed-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans Extra Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/fira-sans-extra-condensed-v10-latin-800.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('/fonts/fira-sans-extra-condensed-v10-latin-800.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* fira-sans-extra-condensed-800italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fira Sans Extra Condensed';
+    font-style: italic;
+    font-weight: 800;
+    src: url('/fonts/fira-sans-extra-condensed-v10-latin-800italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('/fonts/fira-sans-extra-condensed-v10-latin-800italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* merriweather-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/merriweather-v30-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('/fonts/merriweather-v30-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+}
