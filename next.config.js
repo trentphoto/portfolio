@@ -9,7 +9,8 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
-    domains: ['res.cloudinary.com'],
+    domains: ['res.cloudinary.com', 'images.unsplash.com', 'cdn.sanity.io'],
+
   },
 
   // SVGR

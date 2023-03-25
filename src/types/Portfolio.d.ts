@@ -6,7 +6,7 @@ export interface Portfolio {
     description: string;
     body: Body;
     featured: boolean;
-    image: string;
+    image: Image;
     slug: Slug;
     github: string;
     website: string;
@@ -31,4 +31,14 @@ interface Child {
     _type: string;
     marks: string[];
     text: string;
+}
+
+interface Image {
+    _type: string;
+    asset: Asset;
+}
+
+interface Asset {
+    _ref: string;
+    _type: string;
 }

@@ -9,7 +9,7 @@ export default function Hero() {
             <div className="container max-w-4xl grid md:grid-cols-2">
                 <div>
                     <p className='font-fira italic'>Hello World 👋</p>
-                    <h1 className='h0 my-4'>I'm James<span className='text-primary-500'>~</span></h1>
+                    <h1 className='h1 my-4'>I'm James<span className='text-primary-500'>~</span></h1>
                     <p className='font-bold mb-6'>a frontend developer who's passionate about clean, <br /> elegant code and modern UI.</p>
                     <ButtonLink className='mr-2' href="/">About Me</ButtonLink>
                     <ButtonLink variant='grayscale' href="/">Resume</ButtonLink>
