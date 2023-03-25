@@ -9,7 +9,7 @@ export default function Tape({ word }: { word: string }) {
   return (
     <>
     {/* create an element that is skewed a few degrees */}
-      <div className="py-8 bg-gray-600 text-white flex items-center gap-12 absolute -left-12 transform -skew-y-3">
+      <div className="py-8 bg-gray-700 text-white flex items-center gap-12 absolute -left-12 transform -skew-y-3">
           
         {Array(6).fill(<Content />)}
 

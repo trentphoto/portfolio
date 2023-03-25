@@ -40,7 +40,7 @@
   } */
 
   body {
-    @apply antialiased text-gray-600
+    @apply antialiased text-gray-700
   }
 
   .h0 {
