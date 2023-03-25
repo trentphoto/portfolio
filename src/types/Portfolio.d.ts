@@ -1,14 +1,34 @@
 export interface Portfolio {
-    id: number;
+    _id: number;
+    _type: string;
+    _createdAt: string;
     title: string;
     description: string;
-    content: string;
+    body: Body;
+    featured: boolean;
     image: string;
-    slug: string;
+    slug: Slug;
     github: string;
     website: string;
     technologies: string[];
 
     // Optional
     isFeatured?: boolean;
+}
+
+interface Slug {
+    _type: string;
+    current: string;
+}
+
+interface Body {
+    _type: string;
+    children: Child[];
+}
+
+interface Child {
+    _key: string;
+    _type: string;
+    marks: string[];
+    text: string;
 }
