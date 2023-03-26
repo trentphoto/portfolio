@@ -53,7 +53,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
           [
-            size === 'base' && ['px-6 py-2', 'text-2xl md:text-2xl'],
+            size === 'base' && ['px-12 py-3', 'text-2xl md:text-2xl'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
           ],
           //#endregion  //*======== Size ===========
@@ -98,14 +98,14 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {LeftIcon && (
           <div
             className={clsxm([
-              size === 'base' && 'mr-1',
+              size === 'base' && 'mr-3 -ml-2',
               size === 'sm' && 'mr-1.5',
             ])}
           >
             <LeftIcon
               className={clsxm(
                 [
-                  size === 'base' && 'md:text-md text-md',
+                  size === 'base' && 'md:text-3xl text-3xl',
                   size === 'sm' && 'md:text-md text-sm',
                 ],
                 leftIconClassName
