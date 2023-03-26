@@ -50,7 +50,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           'inline-flex items-center rounded-full font-fira uppercase',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
-          'transition-colors duration-75',
+          'transition-all duration-150 group',
           //#region  //*=========== Size ===========
           [
             size === 'base' && ['px-12 py-3', 'text-2xl md:text-2xl'],
@@ -61,13 +61,13 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           [
             variant === 'primary' && [
               'bg-primary-100 text-primary-500',
-              // 'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-700',
-              'disabled:bg-primary-700',
+              'hover:bg-primary-200',
+              'active:bg-primary-200',
+              'disabled:bg-primary-200',
             ],
             variant === 'grayscale' && [
-              'bg-gray-200 text-gray-700',
-              // 'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'bg-gray-100 text-gray-700',
+              'hover:bg-primary-100 active:bg-primary-100 disabled:bg-gray-300',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
@@ -104,6 +104,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           >
             <LeftIcon
               className={clsxm(
+                'transition-all duration-100 group-hover:text-primary-500 group-hover:scale-110',
                 [
                   size === 'base' && 'md:text-3xl text-3xl',
                   size === 'sm' && 'md:text-md text-sm',

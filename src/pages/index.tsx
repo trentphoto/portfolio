@@ -20,7 +20,7 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
           <p className="font-fira text-lg uppercase tracking-wider">Portfolio</p>
           <h2 className="h0 mb-6">Recent Projects<span className='text-blue-600'>.</span></h2>
           <PortfolioItem item={featuredPost[0]} className="mb-8" />
-          <ButtonLink href="/" className='text-center self-center'>View More Projects</ButtonLink>
+          <ButtonLink href="/projects" className='text-center self-center'>View More Projects</ButtonLink>
         </div>
       </section>
       <Tape word='Contact' variant='light' />

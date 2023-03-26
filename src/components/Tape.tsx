@@ -13,7 +13,7 @@ export default function Tape({ word, variant = "dark" }: { word: string, variant
     {/* create an element that is skewed a few degrees */}
       <div className={clsxm("py-8 flex items-center gap-12 absolute -left-12 transform -skew-y-3", variant === "dark" ? "bg-gray-700 text-white" : "bg-gray-200")}>
           
-        {Array(8).fill(<Content />)}
+        {Array(8).fill(<Content key="none" />)}
 
       </div>
     </>
