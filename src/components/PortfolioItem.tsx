@@ -23,8 +23,8 @@ export default function PortfolioItem({ item, className }: { item: Portfolio, cl
 
   return (
     <>
-        <Link key={_id} href={`/projects/${slug.current}`} className={clsxm("relative grid md:grid-cols-2 p-8 border-8 bg-white border-gray-700 transition-transform ease-in-out scale-100 hover:scale-[102%] group", className)}>
-            <div className="flex justify-center">
+        <Link key={_id} href={`/projects/${slug.current}`} className={clsxm("relative grid w-full overflow-hidden md:grid-cols-2 p-4 md:p-8 border-8 bg-white border-gray-700 transition-transform ease-in-out scale-100 hover:scale-[102%] group", className)}>
+            <div className="md:flex justify-center max-w-full w-full">
               {FeaturedImage() || null}
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-8">

@@ -12,7 +12,7 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
   return (
     <>
         <Nav />
-        <section className="pt-40 relative overflow-hidden">
+        <section className="p-12 md:pt-40 relative overflow-hidden">
             <div className="absolute bg-gradient-to-b	from-[#EEF3F7] to-[#ffffff] top-0 left-0 right-0 w-full h-80 z-10">
                 <Pattern className='w-full h-full scale-[500%] relative z-10 opacity-5' />
             </div>

@@ -25,7 +25,9 @@ export default function Nav() {
                 </div>
 
                 {/* logo */}
-                <Logo width={220} height={50} />
+                <Link href="/">
+                    <Logo width={220} height={50} />
+                </Link>
 
                 <div className="flex items-center gap-1">
                     <div className="w-28"></div>

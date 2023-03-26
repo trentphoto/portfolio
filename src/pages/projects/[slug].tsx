@@ -20,7 +20,7 @@ export default function SinglePortfolioPage({ post }: any) {
     return (
         <>
             <Nav />
-            <section className="relative overflow-hidden bg-gradient-to-b	from-[#EEF3F7] to-[#ffffff] py-20 pb-0">
+            <section className="relative overflow-hidden bg-gradient-to-b	from-[#EEF3F7] to-[#ffffff] p-8 py-12 md:py-20 pb-0">
                 <div className="absolute top-0 bottom-0 left-0 right-0 w-full z-10 opacity-40">
                     <Pattern className='w-full h-full scale-[250%]' />
                 </div>
@@ -32,7 +32,7 @@ export default function SinglePortfolioPage({ post }: any) {
             </section>
 
             <section className="">
-                <div className="container max-w-4xl">
+                <div className="container max-w-4xl p-8">
                     <motion.h1
                         initial={animation.hide}
                         animate={animation.show}
@@ -48,7 +48,7 @@ export default function SinglePortfolioPage({ post }: any) {
                     >
                         {description}
                     </motion.p>
-                    <div className="flex gap-2 mb-12">
+                    <div className="flex gap-2 mb-12 flex-col sm:flex-row items-start">
                         { github ? <ButtonLink href={github} variant="grayscale" leftIcon={FaGithub}>Repository</ButtonLink> : '' }
                         { github ? <ButtonLink href={website} variant="grayscale" leftIcon={FaDesktop}>Live Site</ButtonLink> : '' }
                         {/* demo video link here */}

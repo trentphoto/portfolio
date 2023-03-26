@@ -7,6 +7,7 @@ import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 import PortfolioItem from '@/components/PortfolioItem';
 import ButtonLink from '@/components/links/ButtonLink';
+import Footer from '@/components/Footer';
 
 export default function HomePage({ posts, featuredPost }: { posts: any; featuredPost: any }) {
   
@@ -15,7 +16,7 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
       <Nav />
       <Hero />
       <Tape word='Portfolio' />
-      <section className='pt-80 pb-40'>
+      <section className='p-4 py-8 md:py-20'>
         <div className="container max-w-4xl flex flex-col items-start">
           <p className="font-fira text-lg uppercase tracking-wider">Portfolio</p>
           <h2 className="h0 mb-6">Recent Projects<span className='text-blue-600'>.</span></h2>
@@ -24,15 +25,18 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
         </div>
       </section>
       <Tape word='Contact' variant='light' />
-      <section className='pt-60 pb-40'>
+      <section className='p-4 py-8'>
         <div className="container max-w-4xl">
           <h2 className="h0 mb-6">Get in touch<span className='text-blue-600'>.</span></h2>
           <p className='mb-8'>You can reach out to me via the following methods:</p>
-          <ButtonLink href="#">My email</ButtonLink>
-          <ButtonLink href="#">My GitHub</ButtonLink>
-          <ButtonLink href="#">My Resume</ButtonLink>
+          <div className="flex flex-col md:flex-row gap-2 items-start">
+            <ButtonLink href="#">My email</ButtonLink>
+            <ButtonLink href="#">My GitHub</ButtonLink>
+            <ButtonLink href="#">My Resume</ButtonLink>
+          </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

@@ -9,11 +9,11 @@ import Pattern from '~/svg/ooo.svg'
 export default function Hero() {
   return (
     <>
-        <section className='relative bg-gradient-to-b	from-[#EEF3F7] to-white py-32 overflow-hidden'>
+        <section className='relative bg-gradient-to-b	from-[#EEF3F7] to-white py-8 md:py-32 overflow-hidden'>
             <div className="absolute top-0 bottom-0 left-0 right-0 w-full z-10 opacity-70">
                 <Pattern className='w-full h-full scale-[250%]' />
             </div>
-            <div className="container max-w-4xl grid md:grid-cols-2 relative z-20">
+            <div className="container max-w-4xl grid md:grid-cols-2 gap-4 p-6 relative z-20">
                 <div>
                     <motion.p
                         className='font-fira italic'
@@ -39,7 +39,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                     >
                         a frontend developer who's passionate about clean, <br /> elegant code and modern UI.</motion.p>
-                    <div className='flex gap-2'>
+                    <div className='flex flex-col sm:flex-row gap-2'>
                         <motion.div
                             initial={animation.hide}
                             animate={animation.show}
