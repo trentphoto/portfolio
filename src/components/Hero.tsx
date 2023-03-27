@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg'
+import { data } from '@/lib/data';
+import { FaFileAlt } from 'react-icons/fa';
 
 export default function Hero() {
   return (
@@ -53,13 +55,13 @@ export default function Hero() {
                             animate={animation.show}
                             transition={{ delay: 0.4 }}
                         >
-                            <ButtonLink variant='grayscale' href="/">Resume</ButtonLink>
+                            <ButtonLink href={data.resume} variant="grayscale" leftIcon={FaFileAlt}>Resume</ButtonLink>
                         </motion.div>
                     </div>
                 </div>
                 <div>
                     <motion.div 
-                        className="rounded-full w-72 h-72 border-[16px] border-primary-500 overflow-hidden"
+                        className="rounded-full w-72 h-72 border-[16px] border-primary-500 overflow-hidden shadow-xl"
                         initial={animation.scaleHide}
                         animate={animation.scaleShow}
                     >

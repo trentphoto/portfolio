@@ -8,6 +8,7 @@ import { animation } from '../../lib/animation'
 
 import Pattern from '~/svg/ooo.svg';
 import Footer from "@/components/Footer";
+import { FaSuitcase } from "react-icons/fa";
 
 export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
   return (
@@ -18,17 +19,26 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
                 <Pattern className='w-full h-full scale-[500%] relative z-10 opacity-5' />
             </div>
             <div className="container max-w-4xl flex flex-col items-start relative z-20">
-                <motion.h1
-                  className="h0 mb-6"
+                <motion.p 
+                  className='mb-6'
                   initial={animation.hide}
                   animate={animation.show}
+                  >
+                  <FaSuitcase className='text-4xl inline-block mb-0' />
+                </motion.p>
+                <motion.h1
+                  className="h0 mb-6 mt-0"
+                  initial={animation.hide}
+                  animate={animation.show}
+                  transition={{ delay: 0.1 }}
                 >
-                  Recent Projects<span className='text-blue-600'>.</span></motion.h1>
+                  Recent Projects<span className='text-blue-600'>.</span>
+                </motion.h1>
                 <motion.p 
                   className='mb-8'
                   initial={animation.hide}
                   animate={animation.show}
-                  transition={{ delay: 0.1 }}
+                  transition={{ delay: 0.2 }}
                 >
                   A few select projects I've worked on recently.
                 </motion.p>

@@ -8,6 +8,9 @@ import { client } from '@/lib/sanity.client';
 import PortfolioItem from '@/components/PortfolioItem';
 import ButtonLink from '@/components/links/ButtonLink';
 import Footer from '@/components/Footer';
+import { FaFileAlt, FaGithub, FaSuitcase } from 'react-icons/fa';
+import { data } from '@/lib/data';
+import EmailButton from '@/components/EmailButton';
 
 export default function HomePage({ posts, featuredPost }: { posts: any; featuredPost: any }) {
   
@@ -21,18 +24,20 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
           <p className="font-fira text-lg uppercase tracking-wider">Portfolio</p>
           <h2 className="h0 mb-6">Recent Projects<span className='text-blue-600'>.</span></h2>
           <PortfolioItem item={featuredPost[0]} className="mb-8" />
-          <ButtonLink href="/projects" className='text-center self-center'>View More Projects</ButtonLink>
+          <ButtonLink href="/projects" className='text-center self-center' variant='grayscale' leftIcon={FaSuitcase}>View More Projects</ButtonLink>
         </div>
       </section>
       <Tape word='Contact' variant='light' />
-      <section className='p-4 py-8'>
+      <section className='p-4 py-8' id='contact'>
         <div className="container max-w-4xl">
           <h2 className="h0 mb-6">Get in touch<span className='text-blue-600'>.</span></h2>
-          <p className='mb-8'>You can reach out to me via the following methods:</p>
-          <div className="flex flex-col md:flex-row gap-2 items-start">
-            <ButtonLink href="#">My email</ButtonLink>
-            <ButtonLink href="#">My GitHub</ButtonLink>
-            <ButtonLink href="#">My Resume</ButtonLink>
+          <p className='mb-8 text-lg font-bold'>You can reach out to me via the following methods:</p>
+          <div className="flex flex-col gap-4 items-start">
+          <h3>Send me an email.</h3>
+          <EmailButton />
+          <div className="mb-6"></div>
+          <h3>Or find more contact info on my resume.</h3>
+            <ButtonLink href={data.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
           </div>
         </div>
       </section>
