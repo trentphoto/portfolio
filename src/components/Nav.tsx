@@ -41,7 +41,7 @@ export default function Nav3() {
                     {/* desktop right menu */}
                     <div className="items-center gap-1 hidden lg:flex">
                         <div className="w-28"></div>
-                        <Link href="https://github.com/trentphoto" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl hover:bg-gray-100'>
+                        <Link href="https://github.com/trentphoto" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl hover:bg-gray-100 cursor-newtab' target="_blank">
                             <FaGithub className='text-2xl transition-all ease-out duration-300 group-hover:text-primary-600' />
                             Github
                         </Link>

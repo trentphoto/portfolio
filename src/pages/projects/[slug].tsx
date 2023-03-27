@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { animation } from '../../lib/animation'
 
 import Pattern from '~/svg/ooo.svg';
+import Footer from "@/components/Footer";
 
 
 
@@ -53,9 +54,12 @@ export default function SinglePortfolioPage({ post }: any) {
                         { github ? <ButtonLink href={website} variant="grayscale" leftIcon={FaDesktop}>Live Site</ButtonLink> : '' }
                         {/* demo video link here */}
                     </div>
-                    <PortableText value={body} />
+                    <div className="content">
+                        <PortableText value={body} />
+                    </div>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }

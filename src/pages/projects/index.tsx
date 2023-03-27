@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { animation } from '../../lib/animation'
 
 import Pattern from '~/svg/ooo.svg';
+import Footer from "@/components/Footer";
 
 export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
   return (
@@ -42,8 +43,7 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
             </div>
 
         </section>
-
-
+        <Footer />
     </>
   )
 }
