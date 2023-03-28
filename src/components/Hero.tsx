@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg'
-import { data } from '@/lib/data';
+import { data, nav } from '@/lib/data';
 import { FaFileAlt } from 'react-icons/fa';
 
 export default function Hero() {
@@ -47,7 +47,7 @@ export default function Hero() {
                             animate={animation.show}
                             transition={{ delay: 0.3 }}
                         >
-                            <ButtonLink className='mr-2' href="/about">About Me</ButtonLink>
+                            <ButtonLink className='mr-2' href={nav.about}>About Me</ButtonLink>
                         </motion.div>
 
                         <motion.div

@@ -5,6 +5,7 @@ import ButtonLink from './links/ButtonLink'
 import Pattern from '~/svg/ooo.svg'
 import Link from 'next/link'
 import { FaEnvelope, FaHome, FaInfoCircle, FaSuitcase } from 'react-icons/fa'
+import { nav } from '@/lib/data'
 
 export default function Footer() {
   return (
@@ -16,19 +17,19 @@ export default function Footer() {
             <div className="container max-w-4xl gap-4 relative px-20 z-20">
                 <div className="h-1 bg-gray-800 mx-auto w-full mb-4"></div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-                    <Link href="/" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
+                    <Link href={nav.home} className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
                         <FaHome className='text-2xl transition-all ease-out duration-300 group-hover:text-primary-600' />
                         Home
                     </Link>
-                    <Link href="/about" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
+                    <Link href={nav.about} className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
                         <FaInfoCircle className='text-2xl transition-all ease-out duration-300 group-hover:text-primary-600' />
                         About
                     </Link>
-                    <Link href="/projects" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
+                    <Link href={nav.projects} className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
                         <FaSuitcase className='text-2xl transition-all ease-out duration-300 group-hover:text-primary-600' />
                         Projects
                     </Link>
-                    <Link href="/#contact" className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
+                    <Link href={nav.contact} className='group flex gap-2 items-center font-fira text-2xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-50'>
                         <FaEnvelope className='text-2xl transition-all ease-out duration-300 group-hover:text-primary-600' />
                         Contact
                     </Link>

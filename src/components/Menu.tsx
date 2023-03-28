@@ -1,5 +1,6 @@
 import { animation } from '@/lib/animation';
 import clsxm from '@/lib/clsxm';
+import { nav } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -33,7 +34,7 @@ const Menu = () => {
             animate={animation.show}
             transition={{ delay: 0.1 }}
           >
-            <Link href="/" className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
+            <Link href={nav.home} className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
                 <FaHome className='text-4xl mr-4 transition-all ease-out duration-300' />
                 Home
             </Link>
@@ -43,7 +44,7 @@ const Menu = () => {
             animate={animation.show}
             transition={{ delay: 0.2 }}
           >
-            <Link href="/about" className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
+            <Link href={nav.about} className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
                 <FaInfoCircle className='text-4xl mr-4 transition-all ease-out duration-300' />
                 About
             </Link>
@@ -53,7 +54,7 @@ const Menu = () => {
             animate={animation.show}
             transition={{ delay: 0.3 }}
           >
-            <Link href="/projects" className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
+            <Link href={nav.projects} className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
                 <FaSuitcase className='text-4xl mr-4 transition-all ease-out duration-300' />
                 Projects
             </Link>
@@ -63,7 +64,7 @@ const Menu = () => {
             animate={animation.show}
             transition={{ delay: 0.4 }}
           >
-            <Link href="/projects" className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
+            <Link href={nav.contact} className='group flex gap-2 items-center font-fira text-white text-4xl uppercase px-3 py-2 rounded-xl transition-colors duration-75 hover:bg-primary-500'>
                 <FaEnvelope className='text-4xl mr-4 transition-all ease-out duration-300' />
                 Contact
             </Link>
