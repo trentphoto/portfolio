@@ -37,7 +37,7 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
           <EmailButton />
           <div className="mb-6"></div>
           <h3>Or find more contact info on my resume.</h3>
-            <ButtonLink href={data.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
+            <ButtonLink href={nav.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
           </div>
         </div>
       </section>

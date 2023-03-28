@@ -55,7 +55,7 @@ export default function Hero() {
                             animate={animation.show}
                             transition={{ delay: 0.4 }}
                         >
-                            <ButtonLink href={data.resume} variant="grayscale" leftIcon={FaFileAlt}>Resume</ButtonLink>
+                            <ButtonLink href={nav.resume} variant="grayscale" leftIcon={FaFileAlt}>Resume</ButtonLink>
                         </motion.div>
                     </div>
                 </div>

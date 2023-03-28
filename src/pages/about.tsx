@@ -36,7 +36,7 @@ export default function about() {
               <ButtonLink href={nav.projects} className='text-center self-center' variant='grayscale' leftIcon={FaSuitcase}>My Projects</ButtonLink>
             </div>
             <div>
-              <ButtonLink href={data.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
+              <ButtonLink href={nav.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
             </div>
         </div>
       </div>
