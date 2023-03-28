@@ -61,7 +61,7 @@ export default function Hero() {
                 </div>
                 <div>
                     <motion.div 
-                        className="rounded-full w-72 h-72 border-[16px] border-primary-500 overflow-hidden shadow-xl"
+                        className="rounded-full w-72 h-72 border-[16px] border-gray-700  overflow-hidden shadow-xl"
                         initial={animation.scaleHide}
                         animate={animation.scaleShow}
                     >
