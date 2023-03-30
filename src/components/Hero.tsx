@@ -40,7 +40,7 @@ export default function Hero() {
                         animate={animation.show}
                         transition={{ delay: 0.2 }}
                     >
-                        a frontend developer who's passionate about clean, <br /> elegant code and modern UI.</motion.p>
+                        a passionate software engineer specializing in frontend development with React and Typescript.</motion.p>
                     <div className='flex flex-col sm:flex-row gap-2'>
                         <motion.div
                             initial={animation.hide}
