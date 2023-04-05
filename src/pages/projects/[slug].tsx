@@ -13,10 +13,14 @@ import { animation } from '../../lib/animation'
 import Pattern from '~/svg/ooo.svg';
 import Footer from "@/components/Footer";
 
-
-
 export default function SinglePortfolioPage({ post }: any) {
-  const { _id, title, description, image, slug, github, website, body } = post;
+    const { _id, title, description, image, slug, github, website, body } = post;
+    
+    const myPortableTextComponents = {
+        types: {
+            image: ({value}: any) => <img src={value.imageUrl} alt="" />,
+        },
+    }
 
     return (
         <>
@@ -55,7 +59,7 @@ export default function SinglePortfolioPage({ post }: any) {
                         {/* demo video link here */}
                     </div>
                     <div className="content">
-                        <PortableText value={body} />
+                        <PortableText value={body} components={myPortableTextComponents} />
                     </div>
                 </div>
             </section>
