@@ -2,6 +2,7 @@ export interface Portfolio {
     _id: number;
     _type: string;
     _createdAt: string;
+    _updatedAt: string;
     title: string;
     description: string;
     body: Body;

@@ -11,6 +11,11 @@ import Footer from "@/components/Footer";
 import { FaSuitcase } from "react-icons/fa";
 
 export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
+
+  const postsSortedByDate = posts.sort((a, b) => {
+    return new Date(b._updatedAt).getTime() - new Date(a._updatedAt).getTime();
+  });
+  
   return (
     <>
         <Nav />
@@ -43,7 +48,7 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
                   A few select projects I've worked on recently.
                 </motion.p>
                 {
-                    posts.map((post: Portfolio) => (
+                    postsSortedByDate.map((post: Portfolio) => (
                         <PortfolioItem key={post._id} item={post} className="mb-8" />
 
                     ))
