@@ -27,11 +27,11 @@ function DataDisplay({ data }) {
 	  }, []);
   return (
     <>
-			<select>
-				<option value=1>1</option>
-				<option value=1>1</option>
-				<option value=1>1</option>
-      </select>
+	<select>
+ 	  <option value=1>1</option>
+	  <option value=1>1</option>
+  	  <option value=1>1</option>
+      	</select>
       {data.map((item, index) => (
         <div key={index}>{item}</div>
       ))}
