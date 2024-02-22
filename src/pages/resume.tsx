@@ -1,14 +1,10 @@
 import Nav from "@/components/Nav";
-import PortfolioItem from "@/components/PortfolioItem";
-import { client } from "@/lib/sanity.client";
-import { Portfolio } from "@/types/Portfolio";
-import { groq } from "next-sanity";
 import { motion } from "framer-motion";
 import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg';
 import Footer from "@/components/Footer";
-import { FaFileAlt, FaSuitcase } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 import ButtonLink from "@/components/links/ButtonLink";
 import { data } from "@/lib/data";
 

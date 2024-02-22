@@ -69,12 +69,18 @@
    /* custom styles  */
   
     /* defaults for blog post content */
+    .content ul {
+      list-style: disc;
+    }
     .content li {
       margin-left: 1rem;
     }
+    .content p, ul {
+      @apply mb-4;
+    }
     .content p,
     .content li {
-      @apply mb-4 text-lg;
+      @apply text-lg;
     }
     .content a {
       @apply border-b-blue-500 font-semibold text-blue-600 hover:border-b-2 dark:text-blue-500;
@@ -89,6 +95,23 @@
   
     .content img {
       @apply my-8;
+    }
+
+
+    .content pre {
+      background-color: #1a202c;
+      color: #f7fafc;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .content pre code {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        margin-bottom: 2rem;
+        overflow-y: auto;
+        padding: 1rem;
+        font-size: .875rem;
+        line-height: 1.25rem;
     }
   
     /* end custom styles  */

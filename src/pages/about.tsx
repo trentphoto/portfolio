@@ -20,7 +20,7 @@ export default function about() {
             >Hello there ~</motion.p>
             <h1 className="h0 font-primary uppercase italic font-extrabold leading-[60px] mb-4">
                 <motion.span initial={animation.hide} animate={animation.show} transition={{ delay: 0.1 }}>My</motion.span><br />
-                <motion.span initial={animation.hide} animate={animation.show} transition={{ delay: 0.2 }}>Name's</motion.span><br />
+                <motion.span initial={animation.hide} animate={animation.show} transition={{ delay: 0.2 }}>Name&#39;s</motion.span><br />
                 <motion.span initial={animation.hide} animate={animation.show} transition={{ delay: 0.3 }} className="tracking-widest">James</motion.span>
                 <motion.span initial={animation.hide} animate={animation.show} transition={{ delay: 0.3 }} className="text-blue-700">.</motion.span>
                 </h1>

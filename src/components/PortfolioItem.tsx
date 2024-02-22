@@ -1,19 +1,16 @@
 import clsxm from "@/lib/clsxm";
-import { client } from "@/lib/sanity.client";
-import urlFor from "@/lib/urlFor";
 import { Portfolio } from "@/types/Portfolio";
-import { groq } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function PortfolioItem({ item, className }: { item: Portfolio, className?: string }) {
-  const { _id, title, description, image, slug } = item;
+  const { name, excerpt, image, slug } = item;
 
   const FeaturedImage = () => {
     if (image) {
       return (
         <div className="rounded-xl overflow-hidden shadow-md transition-transform ease-in-out group-hover:scale-[107%]">
-          <Image src={urlFor(image).width(800).url()} alt={title} width={360} height={150} />
+          <Image src={image} alt={name} width={360} height={150} />
         </div>
       )
     } else {
@@ -22,18 +19,16 @@ export default function PortfolioItem({ item, className }: { item: Portfolio, cl
   }
 
   return (
-    <>
-        <Link key={_id} href={`/projects/${slug.current}`} className={clsxm("relative grid w-full overflow-hidden md:grid-cols-2 p-4 md:p-8 border-8 bg-white border-gray-700 transition-transform ease-in-out scale-100 hover:scale-[102%] group", className)}>
-            <div className="md:flex justify-center max-w-full w-full">
-              {FeaturedImage() || null}
-            </div>
-            <div className="flex flex-col justify-center text-center px-12 py-8">
-                <h3 className="h3">{title}</h3>
-                {/* blue divider line */}
-                <div className="w-20 h-1 bg-blue-600 mx-auto my-4 transition-transform ease-in-out group-hover:scale-x-150"></div>
-                <p className="font-bold">{description}</p>
-            </div>
-        </Link>
-    </>
+    <Link href={`/projects/${slug}`} className={clsxm("relative grid w-full overflow-hidden md:grid-cols-2 p-4 md:p-8 border-8 bg-white border-gray-700 transition-transform ease-in-out scale-100 hover:scale-[102%] group", className)}>
+        <div className="md:flex justify-center max-w-full w-full">
+          {FeaturedImage() || null}
+        </div>
+        <div className="flex flex-col justify-center text-center px-12 py-8">
+            <h3 className="h3">{name}</h3>
+            {/* blue divider line */}
+            <div className="w-20 h-1 bg-blue-600 mx-auto my-4 transition-transform ease-in-out group-hover:scale-x-150" />
+            <p className="font-bold">{excerpt}</p>
+        </div>
+    </Link>
   )
 }

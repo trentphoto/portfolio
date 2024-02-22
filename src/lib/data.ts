@@ -8,6 +8,7 @@ export const nav = {
     home: "/",
     about: "/about",
     projects: "/projects",
+    blog: "/blog",
     contact: "/#contact",
     resume: "/resume",
 }

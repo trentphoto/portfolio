@@ -1,19 +1,17 @@
 import Nav from "@/components/Nav";
 import PortfolioItem from "@/components/PortfolioItem";
-import { client } from "@/lib/sanity.client";
 import { Portfolio } from "@/types/Portfolio";
-import { groq } from "next-sanity";
 import { motion } from "framer-motion";
 import { animation } from '../../lib/animation'
 
 import Pattern from '~/svg/ooo.svg';
 import Footer from "@/components/Footer";
 import { FaSuitcase } from "react-icons/fa";
+import { getSortedPortfolioItemsData } from "@/lib/portfolio";
 
-export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
-
-  const postsSortedByDate = posts.sort((a, b) => {
-    return new Date(b._updatedAt).getTime() - new Date(a._updatedAt).getTime();
+export default function PortfolioPage({ items }: { items: Portfolio[] }) {
+  const itemsSortedByDate = items.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
   
   return (
@@ -45,18 +43,15 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
                   animate={animation.show}
                   transition={{ delay: 0.2 }}
                 >
-                  A few select projects I've worked on recently.
+                  A few select projects I&#39;ve worked on recently.
                 </motion.p>
                 {
-                    postsSortedByDate.map((post: Portfolio) => (
-                        <PortfolioItem key={post._id} item={post} className="mb-8" />
-
+                    itemsSortedByDate.map((item: Portfolio) => (
+                        <PortfolioItem key={item.slug} item={item} className="mb-8" />
                     ))
                             
                 }
-
             </div>
-
         </section>
         <Footer />
     </>
@@ -64,12 +59,10 @@ export default function PortfolioPage({ posts }: { posts: Portfolio[] }) {
 }
 
 export async function getStaticProps() {
-    const query = groq`*[_type == "post"]`;
-    const posts = await client.fetch(query);
-    return {
+  const items = getSortedPortfolioItemsData();
+  return {
       props: {
-        posts
+          items,
       },
-    };
-  }
-  
+  };
+}

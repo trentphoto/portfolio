@@ -3,16 +3,16 @@ import * as React from 'react';
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Tape from '@/components/Tape';
-import { groq } from 'next-sanity';
-import { client } from '@/lib/sanity.client';
 import PortfolioItem from '@/components/PortfolioItem';
 import ButtonLink from '@/components/links/ButtonLink';
 import Footer from '@/components/Footer';
-import { FaFileAlt, FaGithub, FaSuitcase } from 'react-icons/fa';
-import { data, nav } from '@/lib/data';
+import { FaFileAlt, FaSuitcase } from 'react-icons/fa';
+import { nav } from '@/lib/data';
 import EmailButton from '@/components/EmailButton';
+import { getSortedPortfolioItemsData } from '@/lib/portfolio';
+import { Portfolio } from '@/types/Portfolio';
 
-export default function HomePage({ posts, featuredPost }: { posts: any; featuredPost: any }) {
+export default function HomePage({ items }: { items: Portfolio[] }) {
   
   return (
     <>
@@ -23,7 +23,7 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
         <div className="container max-w-4xl flex flex-col items-start">
           <p className="font-fira text-lg uppercase tracking-wider">Portfolio</p>
           <h2 className="h0 mb-6">Recent Projects<span className='text-blue-600'>.</span></h2>
-          <PortfolioItem item={featuredPost[0]} className="mb-8" />
+          <PortfolioItem item={items[0]} className="mb-8" />
           <ButtonLink href={nav.projects} className='text-center self-center' variant='grayscale' leftIcon={FaSuitcase}>View More Projects</ButtonLink>
         </div>
       </section>
@@ -48,14 +48,10 @@ export default function HomePage({ posts, featuredPost }: { posts: any; featured
 
 // use getStaticProps to make a groq query to sanity database for a post
 export async function getStaticProps() {
-  const query = groq`*[_type == "post"]`;
-  const query2 = groq`*[_type == "post" && featured == true]`;
-  const posts = await client.fetch(query);
-  const featuredPost = await client.fetch(query2);
+  const items = getSortedPortfolioItemsData();
   return {
-    props: {
-      posts,
-      featuredPost
-    },
+      props: {
+          items
+      },
   };
 }

@@ -5,12 +5,11 @@ import { motion } from 'framer-motion';
 import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg'
-import { data, nav } from '@/lib/data';
+import { nav } from '@/lib/data';
 import { FaFileAlt } from 'react-icons/fa';
 
 export default function Hero() {
-  return (
-    <>
+    return (
         <section className='relative bg-gradient-to-b	from-[#EEF3F7] to-white p-4 py-8 md:py-32 overflow-hidden'>
             <div className="absolute top-0 bottom-0 left-0 right-0 w-full z-10 opacity-70">
                 <Pattern className='w-full h-full scale-[250%]' />
@@ -32,7 +31,7 @@ export default function Hero() {
                         animate={animation.show}
                         transition={{ delay: 0.1 }}
                     >
-                        I'm James<span className='text-primary-500'>~</span>
+                        I&#39;m James<span className='text-primary-500'>~</span>
                     </motion.h1>
                     <motion.p 
                         className='font-bold mb-6'
@@ -77,6 +76,5 @@ export default function Hero() {
 
             </div>
         </section>
-    </>
-  )
+    )
 }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
@@ -14,6 +14,7 @@ const ButtonLinkVariant = [
   'light',
   'dark',
 ] as const;
+
 const ButtonLinkSize = ['sm', 'base'] as const;
 
 type ButtonLinkProps = {
@@ -27,7 +28,7 @@ type ButtonLinkProps = {
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  (
+  function ButtonLink (
     {
       children,
       className,
@@ -41,7 +42,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       ...rest
     },
     ref
-  ) => {
+  ) {
     return (
       <UnstyledLink
         ref={ref}
