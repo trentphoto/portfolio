@@ -1,8 +1,8 @@
 ---
-title: "Authentication in React: Two Approaches"
-slug: "auth-react"
-excerpt: "An article about authentication with JWT and Clerk."
-date: '2024-02-16'
+title: "Case Studies: Refactoring for Performance in React"
+slug: "case-studies-refactoring"
+excerpt: "Taking a look at a few real-world scenarios which we resolved through understanding React's optimization hooks and architectural patterns."
+date: '2024-02-22'
 ---
 
 In React applications, performance isn’t a huge consideration when the app is small and lightweight. 
