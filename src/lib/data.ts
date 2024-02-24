@@ -1,7 +1,7 @@
 export const data = {
     github: "https://github.com/trentphoto",
     email: "james@jamestrent.net",
-    resumePDF: "https://res.cloudinary.com/dakfmjumy/image/upload/v1688589230/jamestrent.net/James_Trent_-_Resume_-_frontend_vjpven.pdf",
+    resumePDF: "https://res.cloudinary.com/dakfmjumy/image/upload/v1708788260/jamestrent.net/James_Trent_Resume_miaznh.pdf",
 }
 
 export const nav = {
