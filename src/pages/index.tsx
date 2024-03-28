@@ -31,13 +31,9 @@ export default function HomePage({ items }: { items: Portfolio[] }) {
       <section className='p-4 py-8' id='contact'>
         <div className="container max-w-4xl">
           <h2 className="h0 mb-6">Get in touch<span className='text-blue-600'>.</span></h2>
-          <p className='mb-8 text-lg font-bold'>You can reach out to me via the following methods:</p>
           <div className="flex flex-col gap-4 items-start">
-          <h3>Send me an email.</h3>
-          <EmailButton />
-          <div className="mb-6"></div>
-          <h3>Or find more contact info on my resume.</h3>
-            <ButtonLink href={nav.resume} variant="grayscale" leftIcon={FaFileAlt}>My Resume</ButtonLink>
+            <h3>You can reach out to me via email:</h3>
+            <EmailButton />
           </div>
         </div>
       </section>
