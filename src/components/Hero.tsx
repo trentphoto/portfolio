@@ -6,7 +6,7 @@ import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg'
 import { nav } from '@/lib/data';
-import { FaFileAlt } from 'react-icons/fa';
+import { FaFileAlt, FaSuitcase } from 'react-icons/fa';
 
 export default function Hero() {
     return (
