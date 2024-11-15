@@ -3,8 +3,8 @@ import Nav from "@/components/Nav";
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { animation } from '../lib/animation'
-import { FaFileAlt, FaSuitcase } from "react-icons/fa";
-import { data, nav } from "@/lib/data";
+import { FaSuitcase } from "react-icons/fa";
+import { nav } from "@/lib/data";
 
 export default function about() {
   return (
@@ -30,14 +30,13 @@ export default function about() {
 
         </div>
         <div className="p-12 md:p-20">
-            <Image src="/images/j.jpg" alt="Picture of the author" className="border-8 border-gray-700 shadow-lg mb-12" width={500} height={500} />
+            <Image src="/images/circle.webp" alt="Picture of the author" className="rounded-full border-[16px] border-gray-700  overflow-hidden shadow-xl mb-12" width={400} height={400} />
             <p className="mb-8 font-bold">My journey as a web developer began several years ago when I first became fascinated with some of the websites I came across and how they were built. I quickly discovered a passion for web development and began learning the basics like HTML/CSS/vanilla JS. Since then, it’s been a journey of becoming more and more proficient in designing a great digital experience for every user.</p>
             <div className="mb-2">
               <ButtonLink href={nav.projects} className='text-center self-center' variant='grayscale' leftIcon={FaSuitcase}>View My Projects</ButtonLink>
             </div>
         </div>
       </div>
-
     </>
   )
 }
