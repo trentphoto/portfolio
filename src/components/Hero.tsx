@@ -6,7 +6,7 @@ import { animation } from '../lib/animation'
 
 import Pattern from '~/svg/ooo.svg'
 import { nav } from '@/lib/data';
-import { FaFileAlt, FaSuitcase } from 'react-icons/fa';
+import { FaSuitcase } from 'react-icons/fa';
 
 export default function Hero() {
     return (
@@ -14,8 +14,25 @@ export default function Hero() {
             <div className="absolute top-0 bottom-0 left-0 right-0 w-full z-10 opacity-70">
                 <Pattern className='w-full h-full scale-[250%]' />
             </div>
-            <div className="container max-w-4xl grid md:grid-cols-2 gap-4 relative z-20">
+            <div className="container max-w-4xl grid md:grid-cols-3 gap-8 md:gap-48 relative z-20">
+                
                 <div>
+                    <motion.div 
+                        className="rounded-full w-72 h-72 border-[16px] border-gray-700  overflow-hidden shadow-xl"
+                        initial={animation.scaleHide}
+                        animate={animation.scaleShow}
+                    >
+                        <Image 
+                            src="/images/circle.webp" 
+                            alt="James Trent"
+                            width={300}
+                            height={300}
+                        />
+
+                    </motion.div>
+                </div>
+
+                <div className="col-span-2">
                     <motion.p
                         className='font-fira italic'
                         initial={animation.hide}
@@ -34,7 +51,7 @@ export default function Hero() {
                         I&#39;m James<span className='text-primary-500'>~</span>
                     </motion.h1>
                     <motion.p 
-                        className='font-bold mb-6'
+                        className='font-bold mb-6 max-w-lg'
                         initial={animation.hide}
                         animate={animation.show}
                         transition={{ delay: 0.2 }}
@@ -57,21 +74,6 @@ export default function Hero() {
                             <ButtonLink href={nav.projects} className='text-center self-center' variant='grayscale' leftIcon={FaSuitcase}>View My Projects</ButtonLink>
                         </motion.div>
                     </div>
-                </div>
-                <div>
-                    <motion.div 
-                        className="rounded-full w-72 h-72 border-[16px] border-gray-700  overflow-hidden shadow-xl"
-                        initial={animation.scaleHide}
-                        animate={animation.scaleShow}
-                    >
-                        <Image 
-                            src="https://res.cloudinary.com/dakfmjumy/image/upload/v1677768728/secretariatmedia/profile-small_1_ji1vjh.jpg" 
-                            alt="James Trent"
-                            width={300}
-                            height={300}
-                        />
-
-                    </motion.div>
                 </div>
 
             </div>
